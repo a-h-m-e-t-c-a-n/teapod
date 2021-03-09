@@ -36,6 +36,14 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  created: function () {
+    console.log("created");
+  },
+  methos:{
+    test(){
+      console.log("ok...");
+    }
   }
 }
 </script>

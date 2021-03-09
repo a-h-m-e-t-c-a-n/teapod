@@ -28,3 +28,14 @@
   color: #42b983;
 }
 </style>
+
+<script>
+
+import {createApp} from 'vue';
+import App from './App.vue';
+import PrimeVue from 'primevue/config';
+const app = createApp(App);
+
+app.use(PrimeVue);
+
+</script>
