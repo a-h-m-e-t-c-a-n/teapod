@@ -1,7 +1,7 @@
 <template>
   <div id="nav">
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/test">Test</router-link>
   </div>
   <router-view/>
 </template>
@@ -31,11 +31,5 @@
 
 <script>
 
-import {createApp} from 'vue';
-import App from './App.vue';
-import PrimeVue from 'primevue/config';
-const app = createApp(App);
-
-app.use(PrimeVue);
 
 </script>
