@@ -6,7 +6,7 @@
 
 <script>
 
-import TicTocItem from '../components/TicTocItem.vue';
+import TicTocItem from '../components/VideoPlayer.vue';
 
 export default {
   name: "Test",

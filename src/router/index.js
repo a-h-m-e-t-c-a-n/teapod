@@ -1,16 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
 //import Home from '../views/Home.vue'
-import PrimeHome from '../views/PrimeHome.vue'
+import Home from '../views/Home.vue'
 
 const routes = [
   {
     path: '/',
-    component: PrimeHome,
+    component: Home,
     name:"home",
   },
   {
     path: '/:id',
-    component: PrimeHome,
+    component: Home,
     props:true,//(route) => {console.log("router changed",route);this.id=3},
     name:"homeid",
   },
