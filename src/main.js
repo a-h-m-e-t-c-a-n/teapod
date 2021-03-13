@@ -56,3 +56,8 @@ import Card from "primevue/card";
 app.component('Card',Card);
 import Button from "primevue/button";
 app.component('Button', Button);
+import Sidebar from 'primevue/sidebar';
+app.component('Sidebar', Sidebar);
+import Panel from 'primevue/panel';
+app.component('Panel', Panel);
+

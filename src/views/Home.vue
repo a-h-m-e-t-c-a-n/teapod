@@ -7,7 +7,7 @@
        <div class="p-d-flex" style="width:50%">
         <Card>
           <template #title>
-              Advanced Card
+              <a class="fake-link" href="/content/1" onclick="return false">Advanced Card</a>
           </template>
           <template #content>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
@@ -15,7 +15,7 @@
           </template>
           <template #footer>
               <Button icon="pi pi-check" label="Save" />
-              <Button icon="pi pi-times" label="Cancel" class="p-button-secondary" style="margin-left: .5em" />
+              <Button icon="pi pi-times" label="Cancel" class="p-button-secondary" style="margin-left: .5em" @click="$router.push({name:'content',params:{id:'4'}})"/>
           </template>
       </Card>
       </div> 
@@ -36,7 +36,6 @@
       <VideoPlayer />
     </div>
   </div>
-
 </template>
 <style scoped>
 
@@ -61,26 +60,27 @@ export default {
   },
   data() {
     return {
-      display: false,
+      displayContent: false,
     };
   },
   watch: {
     id() {
+      console.log("id changed");
       this.updateId();
     },
   },
   methods: {
     linkclick() {
       console.log("link clicked", this.id);
-      this.$router.push("/3");
+      this.$router.push({ params: { id: '3' } });
     },
     updateId() {
       console.log("updateroute", this.id);
-      this.display = this.id != null;
+      this.displayContent = this.id != null;
     },
-    dialogClose() {
+    contentClose() {
       console.log("dialog closed", this.$route);
-      this.$router.push({ query: { sex: "k" } });
+      this.$router.push({name:"home"});
     },
   },
 

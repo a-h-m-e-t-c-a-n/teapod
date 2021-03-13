@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 //import Home from '../views/Home.vue'
 import Home from '../views/Home.vue'
+import Content from '../views/Content.vue'
 
 const routes = [
   {
@@ -9,10 +10,10 @@ const routes = [
     name:"home",
   },
   {
-    path: '/:id',
-    component: Home,
+    path: '/content/:id',
+    component: Content,
     props:true,//(route) => {console.log("router changed",route);this.id=3},
-    name:"homeid",
+    name:"content",
   },
   {
     path: '/test',
